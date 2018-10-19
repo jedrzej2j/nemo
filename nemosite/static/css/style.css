@@ -1,0 +1,20 @@
+.single_sound{
+    height:50px;
+    width:400px;
+    padding:10px;
+    margin: 10px auto;
+    text-align:center;
+    border-style: solid;
+    border-color: black;
+}
+
+#play_all{
+    height:50px;
+    width:500px;
+    padding:10px;
+    margin: 10px auto;
+    text-align:center;
+    border-style: solid;
+    border-color: black;
+    background-color:gray;
+}

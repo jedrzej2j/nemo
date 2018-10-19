@@ -5,12 +5,58 @@
     <meta charset="UTF-8">
     <title>Gdzie jest Nemko?</title>
     {% block scripts %}
-        <!--<link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css"/>
+        <script src="{% static '/js/howler.core.js' %}"></script>
+        <script src="{% static '/js/js.js' %}"></script>
+        <!--
         <script src="{% static '/js/bootstrap.min.js' %}"></script>
-        <script src="{% static '/js/jquery-3.3.1.min.js' %}"></script>-->
+        <script src="{% static '/js/jquery-3.3.1.min.js' %}"></script>
+        -->
     {% endblock %}
 </head>
 <body>
-    dadada
+    <div id="box">
+        <div id="play_all">
+            WSZYSTKO NA RAZ<br>
+            <button onclick="playAll()">Play</button>
+            <button onclick="pauseAll()">Pause</button>
+            <button onclick="stopAll()">Stop</button>
+        </div>
+        <div class="single_sound">
+            <div class="sound_name">Ptaki</div> &nbsp;
+            <button onclick="playSound('birds')">Play</button>
+            <button onclick="pauseSound('birds')">Pause</button>
+            <button onclick="stopSound('birds')">Stop</button>
+            <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('birds')" id="birds_volume">
+        </div>
+        <div class="single_sound">
+            <div class="sound_name">Psy</div> &nbsp;
+            <button onclick="playSound('dogs')">Play</button>
+            <button onclick="pauseSound('dogs')">Pause</button>
+            <button onclick="stopSound('dogs')">Stop</button>
+            <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('dogs')" id="dogs_volume">
+        </div>
+        <div class="single_sound">
+            <div class="sound_name">Deszcz</div> &nbsp;
+            <button onclick="playSound('rain')">Play</button>
+            <button onclick="pauseSound('rain')">Pause</button>
+            <button onclick="stopSound('rain')">Stop</button>
+            <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('rain')" id="rain_volume">
+        </div>
+        <div class="single_sound">
+            <div class="sound_name">Piorun</div> &nbsp;
+            <button onclick="playSound('thunders')">Play</button>
+            <button onclick="pauseSound('thunders')">Pause</button>
+            <button onclick="stopSound('thunders')">Stop</button>
+            <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('thunders')" id="thunders_volume">
+        </div>
+        <div class="single_sound">
+            <div class="sound_name">Wiatr</div> &nbsp;
+            <button onclick="playSound('wind')">Play</button>
+            <button onclick="pauseSound('wind')">Pause</button>
+            <button onclick="stopSound('wind')">Stop</button>
+            <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('wind')" id="wind_volume">
+        </div>
+    </div>
 </body>
 </html>
