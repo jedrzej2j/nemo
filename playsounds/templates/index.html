@@ -6,6 +6,7 @@
     <title>Gdzie jest Nemko?</title>
     {% block scripts %}
         <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
         <script src="{% static '/js/howler.core.js' %}"></script>
         <script src="{% static '/js/js.js' %}"></script>
         <!--
@@ -15,48 +16,89 @@
     {% endblock %}
 </head>
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="nemo_img"></div><div class="nemo_img"></div><div class="nemo_img"></div><div class="nemo_img"></div><div class="nemo_img"></div>
+    <div class="nemo_img"></div><div class="nemo_img"></div><div class="nemo_img"></div><div class="nemo_img"></div><div class="nemo_img"></div>
+    <a class="navbar-brand" href="#">Gdzie jest Nemko?</a>
+    <div class="nemo_img"></div><div class="nemo_img"></div><div class="nemo_img"></div><div class="nemo_img"></div><div class="nemo_img"></div>
+    <div class="nemo_img"></div><div class="nemo_img"></div><div class="nemo_img"></div><div class="nemo_img"></div><div class="nemo_img"></div>
+</nav>
+
     <div id="box">
-        <div id="play_all">
-            WSZYSTKO NA RAZ<br>
-            <button onclick="playAll()">Play</button>
-            <button onclick="pauseAll()">Pause</button>
-            <button onclick="stopAll()">Stop</button>
-        </div>
-        <div class="single_sound">
-            <div class="sound_name">Ptaki</div> &nbsp;
-            <button onclick="playSound('birds')">Play</button>
-            <button onclick="pauseSound('birds')">Pause</button>
-            <button onclick="stopSound('birds')">Stop</button>
-            <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('birds')" id="birds_volume">
-        </div>
-        <div class="single_sound">
-            <div class="sound_name">Psy</div> &nbsp;
-            <button onclick="playSound('dogs')">Play</button>
-            <button onclick="pauseSound('dogs')">Pause</button>
-            <button onclick="stopSound('dogs')">Stop</button>
-            <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('dogs')" id="dogs_volume">
-        </div>
-        <div class="single_sound">
-            <div class="sound_name">Deszcz</div> &nbsp;
-            <button onclick="playSound('rain')">Play</button>
-            <button onclick="pauseSound('rain')">Pause</button>
-            <button onclick="stopSound('rain')">Stop</button>
-            <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('rain')" id="rain_volume">
-        </div>
-        <div class="single_sound">
-            <div class="sound_name">Piorun</div> &nbsp;
-            <button onclick="playSound('thunders')">Play</button>
-            <button onclick="pauseSound('thunders')">Pause</button>
-            <button onclick="stopSound('thunders')">Stop</button>
-            <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('thunders')" id="thunders_volume">
-        </div>
-        <div class="single_sound">
-            <div class="sound_name">Wiatr</div> &nbsp;
-            <button onclick="playSound('wind')">Play</button>
-            <button onclick="pauseSound('wind')">Pause</button>
-            <button onclick="stopSound('wind')">Stop</button>
-            <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('wind')" id="wind_volume">
-        </div>
+
+        <br>
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header"><center><h4>Wszystko naraz!</h4></center></div>
+              <div class="card-body">
+                  <center>
+                    <button onclick="playAll()" class="btn btn-primary">Play</button>
+                    <button onclick="pauseAll()" class="btn btn-warning">Pause</button>
+                    <button onclick="stopAll()" class="btn btn-danger">Stop</button>
+                  </center>
+              </div>
+            </div>
+
+            <div class="card border-primary mb-3">
+                <div class="card-header"><center><h4>Ptaki</h4></center></div>
+              <div class="card-body">
+                  <center>
+                    <button onclick="playSound('birds')" class="btn btn-primary">Play</button>
+                    <button onclick="pauseSound('birds')" class="btn btn-warning">Pause</button>
+                    <button onclick="stopSound('birds')" class="btn btn-danger">Stop</button>
+                    <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('birds')" id="birds_volume">
+                  </center>
+              </div>
+            </div>
+
+            <div class="card border-primary mb-3">
+                <div class="card-header"><center><h4>Psy</h4></center></div>
+              <div class="card-body">
+                  <center>
+                    <button onclick="playSound('dogs')" class="btn btn-primary">Play</button>
+                    <button onclick="pauseSound('dogs')" class="btn btn-warning">Pause</button>
+                    <button onclick="stopSound('dogs')" class="btn btn-danger">Stop</button>
+                    <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('dogs')" id="dogs_volume">
+                  </center>
+              </div>
+            </div>
+
+            <div class="card border-primary mb-3">
+                <div class="card-header"><center><h4>Deszcz</h4></center></div>
+              <div class="card-body">
+                  <center>
+                    <button onclick="playSound('rain')" class="btn btn-primary">Play</button>
+                    <button onclick="pauseSound('rain')" class="btn btn-warning">Pause</button>
+                    <button onclick="stopSound('rain')" class="btn btn-danger">Stop</button>
+                    <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('rain')" id="rain_volume">
+                  </center>
+              </div>
+            </div>
+
+            <div class="card border-primary mb-3">
+                <div class="card-header"><center><h4>Piorun</h4></center></div>
+              <div class="card-body">
+                  <center>
+                    <button onclick="playSound('thunders')" class="btn btn-primary">Play</button>
+                    <button onclick="pauseSound('thunders')" class="btn btn-warning">Pause</button>
+                    <button onclick="stopSound('thunders')" class="btn btn-danger">Stop</button>
+                    <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('thunders')" id="thunders_volume">
+                  </center>
+              </div>
+            </div>
+
+            <div class="card border-primary mb-3">
+                <div class="card-header"><center><h4>Piorun</h4></center></div>
+              <div class="card-body">
+                  <center>
+                    <button onclick="playSound('wind')" class="btn btn-primary">Play</button>
+                    <button onclick="pauseSound('wind')" class="btn btn-warning">Pause</button>
+                    <button onclick="stopSound('wind')" class="btn btn-danger">Stop</button>
+                    <input type="range" min="1" max="100" value="50" onmouseup="changeVolume('wind')" id="wind_volume">
+                  </center>
+              </div>
+            </div>
+
     </div>
 </body>
 </html>

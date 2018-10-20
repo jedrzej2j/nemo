@@ -1,5 +1,11 @@
+
+#box{
+    width:400px;
+    margin:0 auto;
+}
+
 .single_sound{
-    height:50px;
+    height:80px;
     width:400px;
     padding:10px;
     margin: 10px auto;
@@ -9,7 +15,7 @@
 }
 
 #play_all{
-    height:50px;
+    height:80px;
     width:500px;
     padding:10px;
     margin: 10px auto;
@@ -18,3 +24,11 @@
     border-color: black;
     background-color:gray;
 }
+
+.nemo_img {
+   margin:0 auto;
+   background:url('/static/images/nemo.png');
+   height:50px;
+   width:50px;
+   background-size: contain;
+}​
